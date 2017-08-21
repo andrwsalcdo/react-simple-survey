@@ -1,4 +1,4 @@
-.App {
+.text-center {
   text-align: center;
 }
 
@@ -11,4 +11,12 @@
 
 .App-intro {
   font-size: large;
+}
+
+input[type='text'] {
+  padding: 4px; 
+  width: 350px; 
+  height: 30px; 
+  border-radius: 5px; 
+  border: #ccc solid 1px; 
 }
