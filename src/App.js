@@ -40,13 +40,12 @@ class App extends Component {
   }
 
   handleQuestionSubmit(event) {
+    //submitting data to Firebase db
     firebase.database().ref('surveys/'+this.state.id).set({
       name: this.state.name, 
       answers: this.state.answers
     }); 
-    this.setState({ submitted: true }, () => {
-      console.log('questions submitted...');
-    }); 
+    this.setState({ submitted: true });
     event.preventDefault(); 
   }
 
@@ -61,9 +60,7 @@ class App extends Component {
         answers.q3 = event.target.value;         
     }
 
-    this.setState({ answers: answers }, () =>{
-      console.log(this.state);
-    }); 
+    this.setState({ answers: answers }); 
   }
 
   render() {
